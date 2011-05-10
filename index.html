@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<meta http-equiv="Content-Language" content="nl-BE"> Only use if site is in non US english -->
+  <!--<meta name="Language" content="english"> Only use if site is in non US english -->
+  <meta charset="utf-8" />
+  <meta name="description" content="">
+
+  <title>jQuery reFormer</title>
+  
+  <link rel="stylesheet" href="screen.css" type="text/css" media="screen">
+  
+  <script src="http://www.google.com/jsapi?key="></script>
+  <script type="text/javascript">
+    google.load("jquery", "1.5");
+  </script>
+  <script src="jquery-reformer.js"></script>
+  <script>
+    $(function(){
+      $("#login").reformer();
+    });
+  </script>
+  
+</head>
+<body>
+<h1>jQuery reFormer</h1>
+<p>The main reason of jQuery reFormer is that you can easily submit your form asynchronous, without having to worry about which elements you have to update. It just refreshes the whole form.</p>
+
+<form action="_reform.html" id="login">
+  <div>
+    <label for="login[login]">Login</label>
+    <input id="login[login]" name="login[login]" type="text" />
+  </div>
+  <div>
+    <label for="login[password]">Password</label>
+    <input id="login[password]" name="login[password]" type="password" />
+  </div>
+  <button type="submit">Login</button>
+</form>
+
+<small>Note that this form submits to a static HTML page, and not to a server side script, which in your project probably will be. This is just for example purpose.</small>
+</body>
+</html>
